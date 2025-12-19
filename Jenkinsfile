@@ -24,7 +24,7 @@ pipeline {
             sh 'mvn install'
             }
         }
-        stage('sachin-Validation') {
+        stage('december-Validation') {
             steps{
             sh 'mvn validate'
             }
