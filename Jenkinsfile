@@ -9,22 +9,22 @@ pipeline {
     stages {
         stage('gitcheckout') {
             steps{
-            git branch: 'main', url: 'https://github.com/devopssachin14/jenkins-java2.git'
+            git branch: 'sachin', url: 'https://github.com/devopssachin14/jenkins-java2.git'
             }
         }
-        stage('MavenCheck') {
+        stage('sachin-MavenCheck') {
             steps{
             sh 'mvn --version'
             }
         }
-        stage('MavenBuild') {
+        stage('sachin-MavenBuild') {
             steps{
             sh 'mvn -B -Dskiptests clean package'
             sh 'mvn validate'
             sh 'mvn install'
             }
         }
-        stage('Validation') {
+        stage('sachin-Validation') {
             steps{
             sh 'mvn validate'
             }
