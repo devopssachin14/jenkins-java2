@@ -7,7 +7,7 @@ pipeline {
         maven ('3.9.11')
     }
     stages {
-        stage('gitcheckout') {
+        stage('sachin-gitcheckout') {
             steps{
             git branch: 'sachin', url: 'https://github.com/devopssachin14/jenkins-java2.git'
             }
